@@ -214,7 +214,7 @@ input[type="file"] {
                     <div class="col-md-3">
                         <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Area pincode</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" maxlength="6" name="pincode">
+                        <input type="text" class="form-control" id="pincode" maxlength="6" name="pincode">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -303,7 +303,7 @@ input[type="file"] {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-  $('#mobile').on('keypress', function (e) {
+  $('#mobile,#pincode').on('keypress', function (e) {
     if (e.which < 48 || e.which > 57) {
       e.preventDefault();
     }
