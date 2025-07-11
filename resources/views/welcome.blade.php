@@ -260,6 +260,8 @@ input[type="file"] {
                             <option value="{{'In review'}}">In review</option>
                             <option value="{{'Shortlisted'}}">Shortlisted</option>
                             <option value="{{'Selected'}}">Selected</option>
+                            <option value="{{'Rejected'}}">Rejected</option>
+                            <option value="{{'Pending'}}">Pending</option>
                           </select>
                         </div>
                     </div>

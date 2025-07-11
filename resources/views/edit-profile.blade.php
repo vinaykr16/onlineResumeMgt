@@ -267,6 +267,8 @@ input[type="file"] {
                             <option @if($userData->interview_status=="In review") selected @endif value="{{'In review'}}">In review</option>
                             <option @if($userData->interview_status=="Shortlisted") selected @endif value="{{'Shortlisted'}}">Shortlisted</option>
                             <option @if($userData->interview_status=="Selected") selected @endif value="{{'Selected'}}">Selected</option>
+                            <option @if($userData->interview_status=="Rejected") selected @endif value="{{'Rejected'}}">Rejected</option>
+                            <option @if($userData->interview_status=="Pending") selected @endif value="{{'Pending'}}">Pending</option>
                           </select>
                         </div>
                     </div>
