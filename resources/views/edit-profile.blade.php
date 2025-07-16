@@ -245,19 +245,19 @@ input[type="file"] {
                 </div>
 
                 <div class="row mx-3">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                          <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Post applied for</label>
                         <input type="text"  class="form-control"  name="post_applied_for" value="{{$userData->post_applied_for}}">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                          <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Company applied for</label>
                         <input type="text"  class="form-control"  name="company_applied_for" value="{{$userData->company_applied_for}}">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                          <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Interview status</label>
                           <select name="interview_status" id="interview_status" class="form-control">
@@ -269,6 +269,20 @@ input[type="file"] {
                             <option @if($userData->interview_status=="Selected") selected @endif value="{{'Selected'}}">Selected</option>
                             <option @if($userData->interview_status=="Rejected") selected @endif value="{{'Rejected'}}">Rejected</option>
                             <option @if($userData->interview_status=="Pending") selected @endif value="{{'Pending'}}">Pending</option>
+                            <option @if($userData->interview_status=="Uploaded") selected @endif value="{{'Uploaded'}}">Uploaded</option>
+                            <option @if($userData->interview_status=="Shared") selected @endif value="{{'Shared'}}">Shared</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Offer Status</label>
+                          <select name="offer_status" id="offer_status" class="form-control">
+                            <option value="" hidden>Select</option>
+                            <option @if($userData->offer_status=="Offer Released") selected @endif value="{{'Offer Released'}}">Offer Released</option>
+                            <option @if($userData->offer_status=="Offer Accepted") selected @endif value="{{'Offer Accepted'}}">Offer Accepted</option>
+                            <option @if($userData->offer_status=="Offer Not Accepted") selected @endif value="{{'Offer Not Accepted'}}">Offer Not Accepted</option>
+                            <option @if($userData->offer_status=="Joined/Appointed") selected @endif value="{{'Joined/Appointed'}}">Joined/Appointed</option>
                           </select>
                         </div>
                     </div>

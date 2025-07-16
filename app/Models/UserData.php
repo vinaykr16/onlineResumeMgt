@@ -30,6 +30,7 @@ class UserData extends Model
             'pan',
             'resume_attachment', // 👈 this is the file field
             'interview_status',
+            'offer_status',
             'post_applied_for',
             'company_applied_for',
             'remarks'
