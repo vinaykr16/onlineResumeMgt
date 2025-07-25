@@ -67,9 +67,9 @@
                                     <th>
                                         Name
                                     </th>
-                                    <th>
+                                    {{-- <th>
                                         Email
-                                    </th>
+                                    </th> --}}
                                     <th>
                                         Mobile Number
                                     </th>
@@ -95,6 +95,12 @@
                                     <th>
                                         Company applied for
                                     </th>
+                                    <th>
+                                        Interview status
+                                    </th>
+                                    <th>
+                                        Offer status
+                                    </th>
 
                                     <th>Action</th>
 
@@ -106,9 +112,9 @@
                                         <td>
                                             {{ $val->name }}
                                         </td>
-                                        <td>
+                                        {{-- <td>
                                             {{ $val->email }}
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             {{ $val->mobile_number }}
                                         </td>
@@ -133,6 +139,12 @@
                                         </td>
                                         <td>
                                             {{ $val->company_applied_for }}
+                                        </td>
+                                        <td>
+                                            {{ $val->interview_status }}
+                                        </td>
+                                        <td>
+                                            {{ $val->offer_status }}
                                         </td>
 
                                         <td>

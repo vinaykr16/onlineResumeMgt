@@ -14,7 +14,7 @@ class UsersExport implements FromCollection,WithHeadings, WithStyles
     */
     public function collection()
     {
-        return UserData::get(['name', 'email', 'mobile_number', 'dob', 'designation', 'pan','current_company', 'current_ctc', 'expected_ctc', 'notice_period', 'employment_type', 'edu_qualification', 'skills', 'work_exp', 'cover_letter', 'pincode', 'current_location', 'preferred_location','company_applied_for','interview_status','offer_status']);
+        return UserData::get(['name', 'email', 'mobile_number', 'dob', 'designation', 'pan','current_company', 'current_ctc', 'expected_ctc', 'notice_period', 'employment_type', 'edu_qualification', 'skills', 'work_exp', 'cover_letter', 'pincode', 'current_location', 'preferred_location','company_applied_for','interview_status','offer_status','remarks']);
     }
     public function headings(): array
     {
@@ -39,7 +39,8 @@ class UsersExport implements FromCollection,WithHeadings, WithStyles
             'Preferred Location',
             'Company applied for',
             'Interview status',
-            'Offer status'
+            'Offer status',
+            'Remarks'
         ];
     }
 
