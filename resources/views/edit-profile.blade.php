@@ -138,7 +138,7 @@ input[type="file"] {
 
                     <div class="col-md-6">
                         <div class="mb-3">
-                        <label  class="form-label">DOB <span style="color: red"><small>*</small></span></label>
+                        <label  class="form-label">DOB </span></label>
                         <input type="text" id="myDate" class="form-control" name="dob"  value="{{ $convertedDate }}" >
                         </div>
                     </div>

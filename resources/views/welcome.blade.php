@@ -131,7 +131,7 @@ input[type="file"] {
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">DOB <span style="color: red"><small>*</small></span></label>
+                        <label for="exampleFormControlInput1" class="form-label">DOB </label>
                         <input type="text" id="myDate" class="form-control" name="dob" >
                         </div>
                     </div>
