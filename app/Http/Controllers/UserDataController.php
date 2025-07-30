@@ -20,12 +20,16 @@ class UserDataController extends Controller
             // Add other fields as necessary
         ]);
 
-
-         if ($request->has('dob')) {
-            $formattedDate = \Carbon\Carbon::createFromFormat('d-m-Y', $request->dob)->format('Y-m-d');
-            $request->merge(['dob' => $formattedDate]);
-         }
-
+           $formattedDate = null;
+            if ($request->filled('dob')) {
+                try {
+                    $formattedDate = \Carbon\Carbon::createFromFormat('d-m-Y', $request->dob)->format('Y-m-d');
+                    $request->merge(['dob' => $formattedDate]);
+                } catch (\Carbon\Exceptions\InvalidFormatException $e) {
+                    // Optional: handle or log the error
+                    return back()->withErrors(['dob' => 'Invalid date format. Use DD-MM-YYYY.']);
+                }
+            }
 
          if ($request->has('doc_attachment')) {
             $file = $request->file('doc_attachment');
@@ -63,10 +67,16 @@ class UserDataController extends Controller
 
         $userData = UserData::findOrFail($request->id);
 
-        if ($request->has('dob')) {
-            $formattedDate = \Carbon\Carbon::createFromFormat('d-m-Y', $request->dob)->format('Y-m-d');
-            $request->merge(['dob' => $formattedDate]);
-        }
+        $formattedDate = null;
+            if ($request->filled('dob')) {
+                try {
+                    $formattedDate = \Carbon\Carbon::createFromFormat('d-m-Y', $request->dob)->format('Y-m-d');
+                    $request->merge(['dob' => $formattedDate]);
+                } catch (\Carbon\Exceptions\InvalidFormatException $e) {
+                    // Optional: handle or log the error
+                    return back()->withErrors(['dob' => 'Invalid date format. Use DD-MM-YYYY.']);
+                }
+            }
 
         if ($request->hasFile('doc_attachment')) {
             $file = $request->file('doc_attachment');
